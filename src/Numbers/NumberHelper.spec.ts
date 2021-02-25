@@ -6,7 +6,7 @@ describe('NumberHelper tests', () => {
   });
 
   test('Number of digits', () => {
-    const test = new NumberHelper(100000);
+    const test = new NumberHelper(758694);
     expect(test.numDigits).toBe(6);
   });
 });
