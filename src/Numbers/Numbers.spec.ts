@@ -19,4 +19,14 @@ describe('Numbers tests', () => {
     const test = new Numbers(2, 3, 5, 6, 8, 10);
     expect(test.median).toBe(5.5);
   });
+
+  test('Low Number', () => {
+    const test = new Numbers(2, 3, 5, 6, 8, 10);
+    expect(test.low).toBe(2);
+  });
+
+  test('High Number', () => {
+    const test = new Numbers(2, 3, 5, 6, 8, 10);
+    expect(test.high).toBe(10);
+  });
 });

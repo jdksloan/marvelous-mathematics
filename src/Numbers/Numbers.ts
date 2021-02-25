@@ -13,4 +13,14 @@ export class Numbers {
     const middle = Math.floor(sorted.length / 2);
     return sorted.length % 2 === 0 ? (sorted[middle] + sorted[middle - 1]) / 2 : sorted[middle];
   }
+
+  public get high(): number {
+    const sorted = this._numbs.sort((a: number, b: number) => b - a);
+    return sorted[0];
+  }
+
+  public get low(): number {
+    const sorted = this._numbs.sort((a: number, b: number) => a - b);
+    return sorted[0];
+  }
 }
