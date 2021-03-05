@@ -29,4 +29,19 @@ describe('Numbers tests', () => {
     const test = new Numbers(2, 3, 5, 6, 8, 10);
     expect(test.high).toBe(10);
   });
+
+  test('Multiples Of 3 And 5', () => {
+    const test = Numbers.multiplesOf3and5(10);
+    expect(test).toBe(23);
+  });
+
+  test('Multiples Of 3 And 5 less than 1000', () => {
+    const test = Numbers.multiplesOf3and5(1000);
+    expect(test).toBe(233168);
+  });
+
+  test('Multiples Of 3 And 5 less than 1000', () => {
+    const test = Numbers.multiplesOf3and5Second(1000);
+    expect(test).toBe(233168);
+  });
 });

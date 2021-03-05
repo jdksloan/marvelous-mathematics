@@ -189,4 +189,8 @@ describe('Prime tests', () => {
     ];
     expect(test.primes).toEqual(arr);
   });
+
+  test('Create primes max length 1000', () => {
+    expect(Prime.largestPrime(600851475143)).toEqual(6857);
+  });
 });

@@ -23,4 +23,26 @@ export class Numbers {
     const sorted = this._numbs.sort((a: number, b: number) => a - b);
     return sorted[0];
   }
+
+  public static multiplesOf3and5(max: number): number {
+    let sum = 0;
+
+    while (max > 2) {
+      max--;
+      if (max % 3 === 0 || max % 5 === 0) {
+        sum += max;
+      }
+    }
+    return sum;
+  }
+
+  public static multiplesOf3and5Second(max: number): number {
+    return this.sumOfSeries(max, 3) + this.sumOfSeries(max, 5) - this.sumOfSeries(max, 3 * 5);
+  }
+
+  private static sumOfSeries(max: number, num: number) {
+    const multiplesCount = Math.floor((max - 1) / num); // (lastOfRange-1) to exlude the last number 1000 here
+    const result = Math.floor((multiplesCount * (num + multiplesCount * num)) / 2); // Num = a1, (multiplesCount * Num) = an.
+    return result;
+  }
 }
